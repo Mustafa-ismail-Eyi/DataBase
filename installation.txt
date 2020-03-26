@@ -1,0 +1,29 @@
+I use Anaconda which is faster then PIP(Anaconda 3.7.6 64bit version)
+Download from here https://www.anaconda.com/distribution/
+You need at least 5 gb free space for installation of anaconda and other libraries
+I prefer to use Pycharm as IDE (PyCharm Community Edition Project)
+You can open Pycharm from the Anaconda Navigator
+And I create virtual environment for PostgreSQL, I wrote steps below:
+1- Open Anaconda Prompt
+2-1) (Optional) conda update conda(If you don't have the latest version of Anaconda)
+2-2) conda create -n postgres python=3.7.6 anaconda #It starts to create virtual environment
+2-2.1) Press y and enter and It takes a while to create and install
+3-) conda env list #lists of your Anaconda environments and you can see "postgres"
+4-) conda activate postgres #With this command you switches to postgres envrionment
+5-) conda install numpy
+6-) conda install pandas
+7-) conda install psycopg2 #This is the PostgreSQL library that I will use and this is most popular library
+8-1)psycopg2 needs some other libraries so I got an error but thankfully anaconda finds those libraries and 
+	it updated those files. This process takes around 15 minutes and It asks you for a conifmation y/n press y
+8-2) create a new file and type this to check It is working or not:
+try:
+    import psycopg2
+    print("working")
+except(Exception):
+    print("not working")
+	or just type
+import psycopg2
+if It throws an error search on the Internet :)))
+  
+
+9-)Finally select the your environment as intrepeter in any IDE (Vscode, Pycharm, spyder, etc...)
